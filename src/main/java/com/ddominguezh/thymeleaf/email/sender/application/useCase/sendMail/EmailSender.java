@@ -14,7 +14,7 @@ public class EmailSender {
 		this.transport.send(
 				Email.create(
 						command.template(), 
-						command.subject(), 
+						command.locale(), 
 						command.json(), 
 						command.recipients()
 					)

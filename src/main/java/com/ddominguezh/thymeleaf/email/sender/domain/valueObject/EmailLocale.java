@@ -1,13 +1,13 @@
 package com.ddominguezh.thymeleaf.email.sender.domain.valueObject;
 
-public class EmailSubject {
+public class EmailLocale {
 
 	private String value;
-	protected EmailSubject(String value) {
+	protected EmailLocale(String value) {
 		this.value = value;
 	}
-	public static EmailSubject create(String value) {
-		return new EmailSubject(value);
+	public static EmailLocale create(String value) {
+		return new EmailLocale(value);
 	}
 	public String value() {
 		return this.value;

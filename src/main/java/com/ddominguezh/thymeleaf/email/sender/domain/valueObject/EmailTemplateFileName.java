@@ -17,19 +17,19 @@ public class EmailTemplateFileName {
 		return new EmailTemplateFileName(value);
 	}
 	
-	public String proccessHTML(Map<String, Object> data) {
+	public String proccessHTML(String locale, Map<String, Object> data) {
 		TemplateEngine templateEngine = new TemplateEngine();
-		templateEngine.addTemplateResolver(templateResolver());
+		templateEngine.addTemplateResolver(templateResolver(locale));
 		
 		Context context = new Context();
         context.setVariables(data);
         return templateEngine.process("index", context);
 	}
 	
-	private ITemplateResolver templateResolver() {
+	private ITemplateResolver templateResolver(String locale) {
 		ClassLoaderTemplateResolver templateResolver = new ClassLoaderTemplateResolver();
 		templateResolver.setSuffix(".html");
-		templateResolver.setPrefix("/email/template/" + this.value + "/");
+		templateResolver.setPrefix("/email/template/" + this.value + "/" +  locale + "/");
 		templateResolver.setTemplateMode("HTML");
 		return templateResolver;
 	}

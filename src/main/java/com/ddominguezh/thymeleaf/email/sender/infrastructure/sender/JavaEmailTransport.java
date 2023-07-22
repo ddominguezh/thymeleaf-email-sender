@@ -23,8 +23,9 @@ public class JavaEmailTransport implements EmailTransport {
             Message message = new MimeMessage(createSession());
             message.setFrom(new InternetAddress(username()));
             message.setRecipients(Message.RecipientType.TO, email.recipients());
-            message.setSubject(email.subject());
-            message.setContent(email.html(), "text/html; charset=utf-8");
+            String html = email.html();
+            message.setSubject(subject(html));
+            message.setContent(html, "text/html; charset=utf-8");
             Transport.send(message);
         } catch (MessagingException e) {
             e.printStackTrace();
@@ -32,6 +33,13 @@ public class JavaEmailTransport implements EmailTransport {
         }
 	}
 	
+	private String subject(String html) {
+		String tag = "title";
+		int startIndex = html.indexOf("<" + tag + ">");
+        int endIndex = html.indexOf("</" + tag + ">");
+		return html.substring(startIndex + tag.length() + 2, endIndex);
+	}
+
 	private Session createSession() {
 		Authenticator authenticator = new Authenticator() {
             @Override

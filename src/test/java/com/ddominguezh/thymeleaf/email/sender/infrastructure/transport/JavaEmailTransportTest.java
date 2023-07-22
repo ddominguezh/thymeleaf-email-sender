@@ -2,8 +2,6 @@ package com.ddominguezh.thymeleaf.email.sender.infrastructure.transport;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
-import java.util.UUID;
-
 import org.junit.jupiter.api.Test;
 
 import com.ddominguezh.thymeleaf.email.sender.domain.Email;
