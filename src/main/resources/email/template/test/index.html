@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Correo de ejemplo generado con Thymeleaf</title>
+</head>
+<body>
+    <h1>Hola, <span th:text="${name}">Nombre</span></h1>
+    <p>Este es un ejemplo de correo electrónico generado con Thymeleaf y enviado desde Java.</p>
+    <p>Tu dirección de correo electrónico es: <span th:text="${email}">Correo</span></p>
+    <h2>Ahora vamos a sacar una lista de ciudades</h2>
+    <div class="pagination"
+        th:each="city : ${cities}">
+         <span th:text="${city.id} + ' - ' + ${city.name}">Ciudad</span>
+    </div>
+</body>
+</html>
