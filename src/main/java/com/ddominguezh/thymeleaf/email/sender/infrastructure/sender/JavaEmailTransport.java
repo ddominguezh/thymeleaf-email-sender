@@ -2,18 +2,18 @@ package com.ddominguezh.thymeleaf.email.sender.infrastructure.sender;
 
 import java.util.Properties;
 
-import javax.mail.Authenticator;
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
-
 import com.ddominguezh.thymeleaf.email.sender.domain.Email;
 import com.ddominguezh.thymeleaf.email.sender.domain.exceptions.SendEmailException;
 import com.ddominguezh.thymeleaf.email.sender.domain.transport.EmailTransport;
+
+import jakarta.mail.Authenticator;
+import jakarta.mail.Message;
+import jakarta.mail.MessagingException;
+import jakarta.mail.PasswordAuthentication;
+import jakarta.mail.Session;
+import jakarta.mail.Transport;
+import jakarta.mail.internet.InternetAddress;
+import jakarta.mail.internet.MimeMessage;
 
 public class JavaEmailTransport implements EmailTransport {
 

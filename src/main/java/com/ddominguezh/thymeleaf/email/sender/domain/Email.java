@@ -1,11 +1,11 @@
 package com.ddominguezh.thymeleaf.email.sender.domain;
 
-import javax.mail.Address;
-
 import com.ddominguezh.thymeleaf.email.sender.domain.valueObject.EmailJsonData;
-import com.ddominguezh.thymeleaf.email.sender.domain.valueObject.EmailRecipients;
 import com.ddominguezh.thymeleaf.email.sender.domain.valueObject.EmailLocale;
+import com.ddominguezh.thymeleaf.email.sender.domain.valueObject.EmailRecipients;
 import com.ddominguezh.thymeleaf.email.sender.domain.valueObject.EmailTemplateFileName;
+
+import jakarta.mail.Address;
 
 public class Email {
 

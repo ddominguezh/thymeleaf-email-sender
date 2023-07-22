@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import javax.mail.Address;
+import jakarta.mail.Address;
 
 public class EmailRecipients {
 

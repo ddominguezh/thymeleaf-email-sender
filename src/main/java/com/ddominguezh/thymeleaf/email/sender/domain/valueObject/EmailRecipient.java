@@ -1,10 +1,10 @@
 package com.ddominguezh.thymeleaf.email.sender.domain.valueObject;
 
-import javax.mail.Address;
-import javax.mail.internet.AddressException;
-import javax.mail.internet.InternetAddress;
-
 import com.ddominguezh.thymeleaf.email.sender.domain.exceptions.EmailRecipientParseException;
+
+import jakarta.mail.Address;
+import jakarta.mail.internet.AddressException;
+import jakarta.mail.internet.InternetAddress;
 
 public class EmailRecipient {
 
